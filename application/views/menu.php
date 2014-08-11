@@ -20,6 +20,8 @@
                         <a href="#" class="Contenedor-Texto-Menu"><span class="Text-menu" > Plan Operativo </span></a>
                 <span class="PuntoHo_Cortico"></span>
                         <a href="<?php echo site_url('plan')?>" class="Contenedor-Texto-sub-Menu" ><span class="Text-menu">Plan</span></a>
+                <span class="PuntoHo_Cortico"></span>        
+                <a href="<?php echo site_url('sesion/logout')?>" class="Contenedor-Texto-Menu"><span class="Text-menu" > Salir(<?php echo strtoupper($this->session->userdata('indicador'));?>) </span></a>
                
              
 

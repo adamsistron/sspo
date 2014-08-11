@@ -13,9 +13,15 @@ class Plan extends CI_Controller {
 
 	public function _example_output($output = null)
 	{
-		
+            $session_id = $this->session->userdata('indicador');
+            
+            if($session_id<>''){
+                $this->load->view('main-aplicacion_plan.php',$output);
+            }else{
+                redirect('/', 'refresh');
+            }
 //            $this->data['responsables']=  $this->responsables();
-            $this->load->view('main-aplicacion_plan.php',$output);
+            
 	}
 
 	public function offices()

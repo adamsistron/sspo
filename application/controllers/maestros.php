@@ -17,7 +17,14 @@ class Maestros extends CI_Controller {
 		
             //echo "eee";die();
             //print_r($output);die();
-            $this->load->view('main-aplicacion.php',$output);
+            $session_id = $this->session->userdata('indicador');
+            if($session_id<>''){
+                $this->load->view('main-aplicacion.php',$output);
+            }else{
+                redirect('/', 'refresh');
+            }
+            
+            
             //$this->load->view('example',$output);
 	}
 
@@ -242,11 +249,13 @@ class Maestros extends CI_Controller {
 			//$crud->set_theme('datatables');
 			$crud->set_table('tm007_tareas');
 			$crud->set_subject('Tarea');
-	            $crud->set_relation('tm007_fk_tm006_activ_id','tm006_actividades','tm006_descripcion');
-			$crud->display_as('tm007_descripcion','Tarea')->display_as('tm007_fk_tm006_activ_id','Actividad');
-                  $crud->set_relation_n_n('Control', 'tr001_control_tarea', 'tm003_controles', 'tr001_fk_tm007_tareas_id', 'tr001_fk_tm003_control_id', trim('{tm003_numero_control} - {tm003_nombre_control}'),'tr001_control_tarea_id');
+                        $crud->field_type('tm007_descripcion','string');
+                        $crud->set_relation('tm007_fk_tm006_activ_id','tm006_actividades','tm006_descripcion');
+			$crud->display_as('tm007_descripcion','Tarea')
+                             ->display_as('tm007_fk_tm006_activ_id','Actividad');
+                        $crud->set_relation_n_n('Control', 'tr001_control_tarea', 'tm003_controles', 'tr001_fk_tm007_tareas_id', 'tr001_fk_tm003_control_id', trim('{tm003_numero_control} - {tm003_nombre_control}'),'tr001_control_tarea_id');
     
-
+//
 			$output = $crud->render();
 
 			$this->_example_output($output);

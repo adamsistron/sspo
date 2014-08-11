@@ -374,7 +374,7 @@ function validarFormulario(frm){
             <tr>
                 <td>
                     <?php 
-                    $attributes = array('class' => 'form', 'id' => 'form', 'name' => 'form');
+                    $attributes = array('class' => 'form', 'id' => 'form', 'name' => 'form',);
                     echo form_open('#',$attributes);
                     echo form_label('Región/Negocio/Filial', 'ubicacion');
                         
@@ -382,9 +382,9 @@ function validarFormulario(frm){
                 </td>
                 <td>
                     <?php 
-                        
-                        $attr='id="ubicacion" class="complet event2" data-check="ubicacion"';
-                        echo form_dropdown('ubicacion', $ubicacion, '4',$attr);
+                        $ubi=$this->session->userdata('ubicacion');
+                        $attr='id="ubicacion" class="complet event2" data-check="ubicacion" disabled="true"';
+                        echo form_dropdown('ubicacion', $ubicacion, $ubi,$attr);
                     ?>
                 </td>
                 <td>
