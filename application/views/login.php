@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 
     <body>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sesion/css/style.css')?>" />
-		<script src="<?php echo base_url('sesion/js/modernizr.custom.63321.js')?>"></script>
+        <!--link rel="stylesheet" type="text/css" href="<?php echo base_url('sesion/css/style.css')?>" /-->
+		<!--script src="<?php echo base_url('sesion/js/modernizr.custom.63321.js')?>"></script-->
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
    
         <div class="container">
