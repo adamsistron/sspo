@@ -48,8 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-//$db['default']['hostname'] = 'localhost';
-$db['default']['hostname'] = '167.134.200.166';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '12qwaszx';
 $db['default']['database'] = 'spo_2';
@@ -64,22 +63,6 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
-$db['incidente']['hostname'] = '167.134.200.166';
-$db['incidente']['username'] = 'root';
-$db['incidente']['password'] = '12qwaszx';
-$db['incidente']['database'] = 'incidentes';
-$db['incidente']['dbdriver'] = 'mysql';
-$db['incidente']['dbprefix'] = '';
-$db['incidente']['pconnect'] = TRUE;
-$db['incidente']['db_debug'] = TRUE;
-$db['incidente']['cache_on'] = FALSE;
-$db['incidente']['cachedir'] = '';
-$db['incidente']['char_set'] = 'utf8';
-$db['incidente']['dbcollat'] = 'utf8_general_ci';
-$db['incidente']['swap_pre'] = '';
-$db['incidente']['autoinit'] = TRUE;
-$db['incidente']['stricton'] = FALSE;
 
 
 /* End of file database.php */
